@@ -18,3 +18,5 @@ There are three types of files in each folder:
 1. snapshot: the snapshot of the virtual machine at the beginning
 2. record logs: the execution record of virtual machine
 3. report: the root cause analysis report of network protocol software vulnerabilities
+
+The dataset will be open soon.

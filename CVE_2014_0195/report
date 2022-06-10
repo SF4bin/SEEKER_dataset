@@ -1,0 +1,17 @@
+Buf Overflow Vulnerability Detected
+
+Receive malicious packets:
+  pc: 0x7ffff7465ad7
+  callstack: 0x55555556e023 --> 0x55555556e45e --> 0x555555597cfe --> 0x5555555b06bf --> 0x555555598fc7 --> 0x55555559935a --> SSL_accept+0x3a:0x7ffff7ba76cc --> dtls1_accept+0x55b:0x7ffff7b97784 --> ssl3_get_client_hello+0xa2:0x7ffff7b73bfb --> dtls1_get_message+0x150:0x7ffff7ba1e79 --> dtls1_get_message_fragment+0xd3:0x7ffff7ba2faa --> dtls1_read_bytes+0x2a4:0x7ffff7b9f6ad --> dtls1_get_record+0xbc:0x7ffff7b9f07f --> ssl3_read_n+0x345:0x7ffff7b868d8 --> 0x7ffff7835a44 --> 0x7ffff784088e
+  packet length: 0x1035
+Heap allocation:
+  pc: 0x7ffff7ba1513
+  callstack: 0x5555555826e2 --> 0x555555599042 --> 0x55555556d9ba --> 0x7ffff7364b97 --> 0x55555556e023 --> 0x55555556e45e --> 0x555555597cfe --> 0x5555555b06bf --> 0x555555598fc7 --> 0x55555559935a --> SSL_accept+0x3a:0x7ffff7ba76cc --> dtls1_accept+0x55b:0x7ffff7b97784 --> ssl3_get_client_hello+0xa2:0x7ffff7b73bfb --> dtls1_get_message+0x150:0x7ffff7ba1e79 --> dtls1_get_message_fragment+0x20f:0x7ffff7ba30e6 --> dtls1_reassemble_fragment+0x173:0x7ffff7ba254b
+Buf:
+  type: heap
+  addr: 0x55555588db60
+  size: 0x10
+Overstep write operation:
+  pc: 0x7ffff7ba268a
+  callstack: 0x5555555826e2 --> 0x555555599042 --> 0x55555556d9ba --> 0x7ffff7364b97 --> 0x55555556e023 --> 0x55555556e45e --> 0x555555597cfe --> 0x5555555b06bf --> 0x555555598fc7 --> 0x55555559935a --> SSL_accept+0x3a:0x7ffff7ba76cc --> dtls1_accept+0x55b:0x7ffff7b97784 --> ssl3_get_client_hello+0xa2:0x7ffff7b73bfb --> dtls1_get_message+0x150:0x7ffff7ba1e79 --> dtls1_get_message_fragment+0x20f:0x7ffff7ba30e6
+  length of write: 0x1001

@@ -1,0 +1,9 @@
+Session State Obfuscation Vulnerability Detected
+
+Receive malicious packets:
+  pc: 0x7ffff747c34e
+  callstack: 0x55555559fc00 --> 0x55555559f0d6 --> 0x5555555bb453 --> 0x5555555d75f6 --> 0x5555555b59e4 --> SSL_read+0x23:0x7ffff7b7ba1f --> ssl_read_internal+0x7b:0x7ffff7b7b925 --> ssl3_read+0x11:0x7ffff7b711d0 --> ssl3_read_internal+0x6c:0x7ffff7b7112e --> ssl3_read_bytes+0x21a:0x7ffff7b69837 --> ssl3_get_record+0x7f6:0x7ffff7b6c65e --> ssl3_read_n+0x17e:0x7ffff7b67a14 --> 0x7ffff772f683 --> 0x7ffff772f1b1 --> 0x7ffff77300e3 --> 0x7ffff7734847 
+  packet length: 0xea
+Access obfuscated state:
+  pc: 0x7ffff7ba91f3
+  callstack: 0x5555555d75f6 --> 0x5555555b59e4 --> SSL_read+0x23:0x7ffff7b7ba1f --> ssl_read_internal+0x7b:0x7ffff7b7b925 --> ssl3_read+0x11:0x7ffff7b711d0 --> ssl3_read_internal+0x6c:0x7ffff7b7112e --> ssl3_read_bytes+0xb56:0x7ffff7b6a173 --> ossl_statem_accept+0xe:0x7ffff7b92086 --> state_machine+0x3bd:0x7ffff7b91dfc --> read_state_machine+0x38e:0x7ffff7b914f5 --> ossl_statem_server_post_process_message+0x41:0x7ffff7ba52f2 --> tls_post_process_client_hello+0x2f:0x7ffff7ba4e10 --> tls_early_post_process_client_hello+0xb1d:0x7ffff7b9fc0f --> tls1_set_server_sigalgs+0x85:0x7ffff7baa063 --> tls1_process_sigalgs+0x20:0x7ffff7ba9f3a --> tls1_set_shared_sigalgs+0xf7:0x7ffff7ba9340

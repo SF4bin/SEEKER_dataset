@@ -1,0 +1,11 @@
+Double Free Vulnerability Detected
+
+First Free:
+  pc: 0x555555574234
+  callstack: 0x2e6e2 --> 0x45042 --> 0x7ffff7de8cb2 --> main+0x2c6:0x55555555bd2e --> read_from_file+0x51:0x55555555ad5a --> zip_open+0x9c:0x55555556474a --> zip_open_from_source+0x260:0x555555564a12 --> _zip_open+0x14a:0x555555564b9f --> _zip_find_central_dir+0x1f0:0x555555565cea --> _zip_read_cdir+0x51a:0x5555555652f0 --> _zip_dirent_read+0xb0e:0x55555555ef5e 
+Second Free:
+  pc: 0x555555574234
+  callstack: 0x2e6e2 --> 0x45042 --> 0x7ffff7de8cb2 --> main+0x2c6:0x55555555bd2e --> read_from_file+0x51:0x55555555ad5a --> zip_open+0x9c:0x55555556474a --> zip_open_from_source+0x260:0x555555564a12 --> _zip_open+0x14a:0x555555564b9f --> _zip_find_central_dir+0x1f0:0x555555565cea --> _zip_read_cdir+0x51a:0x5555555652f0 --> _zip_dirent_read+0xb7a:0x55555555efca
+Freed Heap:
+    addr: 0x5555555f7a30
+    size: 0x30

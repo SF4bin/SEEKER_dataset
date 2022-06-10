@@ -1,0 +1,14 @@
+Use After Free Vulnerability Detected
+
+Receive malicious packets:
+  pc: 0x7ffff746f34e
+  callstack: 0x5555555a0f9a --> 0x5555555bd8c4 --> 0x5555555c1f7c --> 0x5555555bed32 --> 0x5555555bf311 --> 0x7ffff7b89a83 --> 0x7ffff7b8cc63 --> 0x7ffff7b9555b --> 0x7ffff7b95a47 --> 0x7ffff7b95cc3 --> 0x7ffff7ba0f78 --> 0x7ffff7b7201d --> 0x7ffff7b74046 --> 0x7ffff7b6fefd --> BIO_read+0xf5:0x7ffff7721a61 --> sock_read+0x47:0x7ffff772929d
+  packet length: 0x4000
+Free Heap:
+  pc: 0x7ffff77587ac
+  callstack: 0x5555555826e2 --> 0x555555599042 --> 0x5555555813da --> 0x7ffff708eb97 --> 0x5555555a065e --> 0x5555555a0f9a --> 0x5555555bd8c4 --> 0x5555555c1f7c --> 0x5555555bed32 --> 0x5555555bf311 --> 0x7ffff7b89a83 --> 0x7ffff7b8cc63 --> 0x7ffff7b9555b --> 0x7ffff7b95a47 --> 0x7ffff7b95e08 --> BUF_MEM_grow_clean+0x161:0x7ffff77587ac
+  heap: 0x555555838f20
+  size: 0x5550
+Access to Freed Heap:
+  pc: 0x7ffff7128696
+  callstack: 0x555555599042 --> 0x5555555813da --> 0x7ffff708eb97 --> 0x5555555a065e --> 0x5555555a0f9a --> 0x5555555bd8c4 --> 0x5555555c1f7c --> 0x5555555bed32 --> 0x5555555bf311 --> 0x7ffff7b89a83 --> 0x7ffff7b8cc63 --> 0x7ffff7b9555b --> 0x7ffff7b95a47 --> 0x7ffff7b95e85 --> 0x7ffff7ba13bd --> 0x7ffff7b72355

@@ -4,11 +4,14 @@ Receive malicious packets:
   pc: 0x7ffff7453081
   callstack: 0x555555599042 --> 0x555555554efa --> 0x7ffff7364b97 --> 0x555555555267 --> SSL_accept+0x3a:0x7ffff7ba76cc --> ssl23_accept+0x21f:0x7ffff7b8c9f0 --> ssl23_get_client_hello+0xd02:0x7ffff7b8d7c0 --> SSL_accept+0x3a:0x7ffff7ba76cc --> ssl3_accept+0xb4d:0x7ffff7b7310b --> ssl3_check_client_hello+0x51:0x7ffff7b73a05 --> ssl3_get_message+0x13d:0x7ffff7b8a17d --> ssl3_read_bytes+0x2bc:0x7ffff7b8804d --> ssl3_get_record+0x3a0:0x7ffff7b86d99 --> ssl3_read_n+0x345:0x7ffff7b868d8 --> 0x7ffff7835a44 --> 0x7ffff78382cb
   packet length: 0x3
+  message sequence number: 2
 Overstep read operation:
   pc: 0x7ffff73fe460
   callstack: 0x5555555826e2 --> 0x555555599042 --> 0x555555554efa --> 0x7ffff7364b97 --> 0x555555555267 --> SSL_accept+0x3a:0x7ffff7ba76cc --> ssl23_accept+0x21f:0x7ffff7b8c9f0 --> ssl23_get_client_hello+0xd02:0x7ffff7b8d7c0 --> SSL_accept+0x3a:0x7ffff7ba76cc --> ssl3_accept+0xb4d:0x7ffff7b7310b --> ssl3_check_client_hello+0x51:0x7ffff7b73a05 --> ssl3_get_message+0x13d:0x7ffff7b8a17d --> ssl3_read_bytes+0x569:0x7ffff7b882fa --> tls1_process_heartbeat+0x159:0x7ffff7b940dc 
   length of read: 0x5000
+  message sequence number: 2
 Buf:
   type: heap
   addr: 0x555555780fab
   size: 0x4548
+  message sequence number: 1

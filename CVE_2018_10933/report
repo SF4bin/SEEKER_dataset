@@ -4,6 +4,8 @@ Receive malicious packets:
   pc: 0x7ffff6f34a1d
   callstack: 0x555555556d10 --> 0x5555555566d5 --> ssh_handle_key_exchange+0x103:0x7ffff7b9e2f6 --> ssh_handle_packets_termination+0xb7:0x7ffff7b7dc4b --> ssh_handle_packets+0x123:0x7ffff7b7db78 --> ssh_poll_ctx_dopoll+0x196:0x7ffff7b7c3ca --> ssh_socket_pollcallback+0x26b:0x7ffff7b80372 --> ssh_socket_unbuffered_read+0x50:0x7ffff7b80dc7 
   packet length: 0x10
+  message sequence number: 4
 Change authentication state:
   pc: 0x7ffff7d44077
   callstack: 0x555555556d10 --> 0x555555556777 --> ssh_event_dopoll+0x36874:0x7ffff7d6d874 --> ssh_poll_ctx_dopoll+0x363ca:0x7ffff7d6d3ca --> ssh_socket_pollcallback+0x3a5ca:0x7ffff7d715ca --> ssh_packet_socket_callback+0x2e43f:0x7ffff7d6543f --> ssh_packet_process+0x2e8f6:0x7ffff7d658f6
+  message sequence number: 4

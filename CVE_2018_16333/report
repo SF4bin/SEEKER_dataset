@@ -4,6 +4,7 @@ Receive malicious packets:
   pc: 0xf014
   callstack: 0x1b388
   packet length: 0x100
+  message sequence number: 1
 Buf:
   type: stack
   addr: 0xbef35958
@@ -13,3 +14,4 @@ Overstep write operation:
   pc: 0x6707c
   callstack: 0x18074 --> websFormHandler+0x150:0x000171c8
   length of write: no limit
+  message sequence number: 1
